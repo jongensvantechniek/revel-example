@@ -6,5 +6,11 @@ module:testrunner
 
 GET     /                                       App.Index
 
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Add Loader.io support
+GET     /loaderio-e88dc3fbff22b71cc3546e736b4ac784.txt      Static.Serve("loaderio-e88dc3fbff22b71cc3546e736b4ac784.txt")
+
 # Catch all
 *       /:controller/:action                    :controller.:action
